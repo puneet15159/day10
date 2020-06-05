@@ -10,6 +10,6 @@ read b
 echo "Enter third number"
 read c
 
-calc $c+$a/$b
+calc $a%$b+$c
 
 
