@@ -11,8 +11,8 @@ read c
 
 result1=$(($a+$b*$c))
 result2=$(($a*$b+$c))
-result3=$(calc $c+$a/$b)
-result4=$(calc $a%$b+$c)
+result3=$(($c+$a/$b))
+result4=$(($a%$b+$c))
 
 #storing all the results in an dictiontry
 
@@ -31,3 +31,18 @@ do
 done
 
 echo "${array[@]}"
+mysortdesc(){
+for((i=${#array[@]}-1;i>=0; i--)); do
+for((j=1;j<=$i; j++)); do
+if [[ ${array[j-1]} -lt ${array[j]} ]]; then
+temp="${array[j-1]}"
+array[j-1]="${array[j]}"
+array[j]="$temp"
+fi
+done
+done
+}
+
+mysortdesc "$array"
+
+echo "Sorted array descending order: ${array[@]}"
