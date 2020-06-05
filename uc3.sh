@@ -8,5 +8,5 @@ read b
 echo "Enter third number"
 read c
 
-result=$(($a+$b*$c))
+result=$(($a*$b+$c))
 echo "result is: $result"
