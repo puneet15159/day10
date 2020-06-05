@@ -1,6 +1,8 @@
   
 #!/bin/bash
 
+function calc(){ awk "BEGIN { print "$*" }"; }
+
 echo "Enter first number"
 read a
 echo "Enter second number"
@@ -8,5 +10,6 @@ read b
 echo "Enter third number"
 read c
 
-result=$(($a*$b+$c))
-echo "result is: $result"
+calc $c+$a/$b
+
+
