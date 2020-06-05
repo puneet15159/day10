@@ -22,5 +22,12 @@ ans[1]=$result1
 ans[2]=$result2
 ans[3]=$result4
 ans[4]=$result3
+
 echo ${ans[@]}
 
+for i in "${!ans[@]}"
+do
+  array[((counter++))]=${ans[$i]}
+done
+
+echo "${array[@]}"
