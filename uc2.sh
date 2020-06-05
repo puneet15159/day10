@@ -1,3 +1,4 @@
+  
 #!/bin/bash
 
 echo "Enter first number"
@@ -6,3 +7,6 @@ echo "Enter second number"
 read b
 echo "Enter third number"
 read c
+
+result=$(($a+$b*$c))
+echo "result is: $result"
